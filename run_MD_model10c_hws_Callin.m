@@ -9,6 +9,8 @@
 %9/4/17- FIXED K and c
 %9/6/17- Fixed tau to have a maximum value of 10000 g*(cm^2)/(s^2)
 
+
+
 %10b is for horizontal flight
 %10c is for aggressive maneuver
 %10d is for hovering
@@ -72,7 +74,7 @@ timestep = 100; %The number of timesteps we will use when interpolating
                 %DO NOT CHANGE TIMESTEP
 halfwingStrokes = 1; 
 % numOfTrajectories = 1000; %Number of trajectories for a given wing beat
-FullRuns = 3; %Number of full runs 
+FullRuns = 1; %Number of full runs 
 kk = 1; %Overall counter. Do not reset!
 kkskip = 1; %Overall counter OF SKIPS. Do not reset!
 nn = 1; %Counter of full runs. Do not reset!
@@ -102,12 +104,11 @@ q0_og = [0, 0, theta_g, (theta_g + pi), 1*10^-4, 1*10^-4, 0, 0];
 q0 = q0_og;
 
 %% Import Callin's data
-Callin.set1 = csvread('simulationDataset1_blindedX.csv',1);
-Callin.set2 = csvread('simulationDataset2_blindedX.csv',1);
-Callin.set3 = csvread('simulationDataset3_blindedX.csv',1);
+Callin.set1 = csvread('/Users/cswitzer/Dropbox/mothMachineLearning_dataAndFigs/Data/simulationDataset5_blinded_testset.csv',1);
+%Callin.set2 = csvread('simulationDataset2_blindedX.csv',1);
+%Callin.set3 = csvread('simulationDataset3_blindedX.csv',1);
 
-numOfTrajectories(1,1:3) = [size(Callin.set1,1), size(Callin.set2,1),...
-    size(Callin.set3,1)];
+numOfTrajectories(1,1) = size(Callin.set1,1);
 
 % ICs = zeros(numOfTrajectories,8);
 % ConVars = zeros(numOfTrajectories,3);
@@ -143,13 +144,13 @@ ConVars = zeros(numOfTrajectories(nn),3);
         A = Callin.set1;
     end
 
-    if nn == 2
-        A = Callin.set2;
-    end
-
-    if nn == 3
-        A = Callin.set3;
-    end
+%     if nn == 2
+%         A = Callin.set2;
+%     end
+% 
+%     if nn == 3
+%         A = Callin.set3;
+%     end
 
 Qstore = zeros(timestep*halfwingStrokes, 8*numOfTrajectories(nn));
 ValSp3 = zeros(numOfTrajectories(nn),12*halfwingStrokes);
