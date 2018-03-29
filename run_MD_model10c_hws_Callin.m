@@ -104,7 +104,7 @@ q0_og = [0, 0, theta_g, (theta_g + pi), 1*10^-4, 1*10^-4, 0, 0];
 q0 = q0_og;
 
 %% Import Callin's data
-Callin.set1 = csvread('/Users/cswitzer/Dropbox/mothMachineLearning_dataAndFigs/Data/simulationDataset5_blinded_testset.csv',1);
+Callin.set1 = csvread('/Users/cswitzer/Dropbox/mothMachineLearning_dataAndFigs/Data/simulationDataset6_blinded_generatedtestset.csv',1);
 %Callin.set2 = csvread('simulationDataset2_blindedX.csv',1);
 %Callin.set3 = csvread('simulationDataset3_blindedX.csv',1);
 
