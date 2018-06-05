@@ -18,7 +18,8 @@
 *.csv
 *.gz
 
-
+# hdf5 files
+*.hdf5
 
 
 
