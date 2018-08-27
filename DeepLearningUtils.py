@@ -1,3 +1,29 @@
+import numpy as np
+from matplotlib import pyplot as plt
+plt.ion()
+
+import os
+import pandas as pd
+import time
+from datetime import datetime
+import sys
+import seaborn as sns
+import scipy.io
+import subprocess
+
+
+import tensorflow as tf
+print("TensorFlow successfully installed.")
+if tf.test.is_built_with_cuda():
+    print("The installed version of TensorFlow includes GPU support.")
+
+print(sys.version, "\n")
+now = datetime.now()
+print("last run on " + str(now))
+
+
+
+
 def plot_model_history(model_history, saveFig = False):
     fig, axs = plt.subplots(1,1,figsize=(10,5))
     # summarize history for accuracy
