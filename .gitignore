@@ -1,6 +1,9 @@
 # all subdirectories
 */*
 
+# large data folder
+PythonGeneratedData
+
 *.aux
 *.log
 *.out
