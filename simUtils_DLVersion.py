@@ -84,3 +84,15 @@ def flyBug_dictInput(simNum, t, state0_ICs, FAlphaTau_list, globalList):
     phi, phid = state[:, 6], state[:,7]
     return(np.array([x, xd, y, yd, theta, thetad, phi, phid]))
 
+# does a single trajectory
+
+def flyBug_OneRun(t, state0_ICs, FAlphaTau_list, globalList):
+    F = FAlphaTau_list[0]
+    alpha = FAlphaTau_list[1]
+    tau0 = FAlphaTau_list[2]
+    state = odeint(FlyTheBug, state0_ICs, t, args = (F, alpha, tau0, *globalList))
+    x, xd = state[:,0], state[:,1]
+    y, yd = state[:,2], state[:,3]
+    theta, thetad = state[:,4],state[:,5]
+    phi, phid = state[:, 6], state[:,7]
+    return(np.array([x, xd, y, yd, theta, thetad, phi, phid]))
