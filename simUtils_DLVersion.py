@@ -90,7 +90,7 @@ def flyBug_OneRun(t, state0_ICs, FAlphaTau_list, globalList):
     F = FAlphaTau_list[0]
     alpha = FAlphaTau_list[1]
     tau0 = FAlphaTau_list[2]
-    state = odeint(FlyTheBug, state0_ICs, t, args = (F, alpha, tau0, *globalList))
+    state = odeint(FlyTheBug, state0_ICs, t, args = (F, alpha, tau0, *globalList), mxstep = 50000000)
     x, xd = state[:,0], state[:,1]
     y, yd = state[:,2], state[:,3]
     theta, thetad = state[:,4],state[:,5]
