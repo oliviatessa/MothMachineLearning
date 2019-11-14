@@ -1,6 +1,7 @@
 # all subdirectories
 */*
 !Underactuated/*
+!FullyActuated/*
 
 
 # large data folder
