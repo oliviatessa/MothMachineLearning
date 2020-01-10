@@ -2,7 +2,7 @@
 */*
 !Underactuated/*
 !FullyActuated/*
-
+!Archive/*
 
 # large data folder
 PythonGeneratedData
