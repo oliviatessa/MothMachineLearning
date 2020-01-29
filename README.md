@@ -5,12 +5,3 @@ Insect flight is a highly non-linear dynamical system.  As such, strategies for 
 
 
 This is a work in progress (code is still messy). 
-
-
-Featured jupyter notebooks: 
-
-```002_TrainNN_BigData.ipynb```
-This file shows the use of Keras to train a deep neural network, with the Tensorflow backend.
-
-```003_CompareNumericalVsNNet.ipynb```
-This file shows the comparison of the neural network controller with simulations
