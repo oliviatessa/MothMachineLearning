@@ -5,3 +5,18 @@ Insect flight is a highly non-linear dynamical system.  As such, strategies for 
 
 
 This is a work in progress (code is still messy). 
+
+
+
+
+## create conda environment with tools for generating data and training network
+## note that this environment requires a GPU and the correct NVIDIA drivers
+```conda env create -f environment_ODE_DL.yml```
+
+
+## Create kernelspec
+```
+conda activate deeplearn_V3
+python -m ipykernel install --user --name deepLearn_V3
+conda deactivate
+```
