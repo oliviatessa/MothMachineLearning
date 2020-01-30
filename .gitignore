@@ -1,3 +1,4 @@
+
 # all subdirectories
 */*
 
@@ -21,7 +22,7 @@ PythonGeneratedData
 */.ipynb_checkpoints/*
 
 # DS_Store
-.DS_Store
+.Rhistory
 
 # .csv and .gz
 *.csv
