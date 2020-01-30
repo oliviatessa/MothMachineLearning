@@ -12,7 +12,7 @@ def FlyTheBug(state0, t, F, alpha, tau0,
                 m1, m2, echead, ecbutt, I1, I2, S_head, S_butt):
     
     # unpack the state vector
-    x,xd,y,yd,theta,thetad,phi,phid= state0 # displacement,x and velocity xd  etc...   You got it?'
+    x,xd,y,yd,theta,thetad,phi,phid= state0 # displacement,x and velocity xd  etc...
 
     #Reynolds number calculation:
     Re_head = rhoA*(np.sqrt((xd**2)+(yd**2)))*(2*bhead)/muA #dimensionless number
