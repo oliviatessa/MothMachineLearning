@@ -9,12 +9,14 @@ This is a work in progress (code is still messy).
 
 # Here's how I set up the Anaconda environment on my computer
 
-## create conda environment with tools for generating data and training network
-## note that this environment requires a GPU and the correct NVIDIA drivers
+- create conda environment with tools for generating data and training network
+- note that this environment requires a GPU and the correct NVIDIA drivers
+
 ```conda env create -f environment_ODE_DL.yml```
 
 
-## Create kernelspec
+- Create kernelspec (so you can see this kernel in jupyter lab)
+
 ```
 conda activate deeplearn_V4
 python -m ipykernel install --user --name deepLearn_V4
