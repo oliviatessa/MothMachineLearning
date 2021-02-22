@@ -16,5 +16,5 @@ dependencies:
   - pip
   - pip:
       - keras==2.1.5
-      - tensorboard==2.2.2
+      - tensorboard
       - tensorflow-gpu==2.0.0
